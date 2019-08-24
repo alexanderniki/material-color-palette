@@ -1,105 +1,261 @@
-<!DOCTYPE html>
-<html lang="en">
-  
-  
-  
-  
-  
-  <head>
-    <meta id="bb-bootstrap" data-current-user="{&quot;displayName&quot;: &quot;Alexander Niki&quot;, &quot;uuid&quot;: &quot;{9a27deca-279a-4069-87a8-e09dd68cccf0}&quot;, &quot;hasPremium&quot;: false, &quot;avatarUrl&quot;: &quot;https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:7cf5fe2c-3096-450c-aef5-e0371b4f8fb8/838764d0-061e-48d0-97e1-5b2c0bcf43ae/128&quot;, &quot;isTeam&quot;: false, &quot;isSshEnabled&quot;: false, &quot;mention_id&quot;: &quot;557058:7cf5fe2c-3096-450c-aef5-e0371b4f8fb8&quot;, &quot;isKbdShortcutsEnabled&quot;: true, &quot;avatarUrl2x&quot;: &quot;https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:7cf5fe2c-3096-450c-aef5-e0371b4f8fb8/838764d0-061e-48d0-97e1-5b2c0bcf43ae/128?s=64&quot;, &quot;nickname&quot;: &quot;alexanderniki&quot;, &quot;id&quot;: 2449616, &quot;isAuthenticated&quot;: true}"
-data-atlassian-id="557058:7cf5fe2c-3096-450c-aef5-e0371b4f8fb8" />
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bitbucket</title>
-    <script nonce="" type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwMGVVZSGwIIUFBQDwU="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(23),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(24),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(13),t(12),"addEventListener"in window&&t(6),c.xhrWrappable&&t(14),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){j++,L=y.hash,this[u]=x.now()}function o(){j--,y.hash!==L&&i(0,!0);var t=x.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=x.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,x=t("loader");if(w[v]&&x.xhrWrappable){var g=t(10),b=t(11),E=t(8),R=t(6),O=t(13),C=t(7),P=t(14),T=t(9),N=t("ee"),S=N.get("tracer");t(16),x.features.spa=!0;var L,j=0;N.on(u,r),N.on(p,r),N.on(d,o),N.on(l,o),N.buffer([u,d,"xhr-done","xhr-resolved"]),R.buffer([u]),O.buffer(["setTimeout"+c,"clearTimeout"+s,u]),P.buffer([u,"new-xhr","send-xhr"+s]),C.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),g.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),S.buffer([u,"no-"+u]),T.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(P,"send-xhr"+s),a(N,"xhr-resolved"),a(N,"xhr-done"),a(C,m+s),a(C,m+"-done"),a(T,"new-jsonp"),a(T,"jsonp-end"),a(T,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,j>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),s=t(12),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",l="-start",h="-end",m="fn"+l,v="fn"+h,w="bstTimer",y="pushState",x=t("loader");x.features.stn=!0,t(8);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=x.now())}),o.on(v,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,x.now()])}),a.on(m,function(t,e,n){this.bstStart=x.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,x.now(),this.bstType])}),s.on(m,function(){this.bstStart=x.now()}),s.on(v,function(t,e){i(w,[e,this.bstStart,x.now(),"requestAnimationFrame"])}),o.on(y+l,function(t){this.time=x.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(26)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(23);e.exports=o;var a=window,s="fetch-",c=s+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,l="prototype";u&&d&&p&&(i(f,function(t,e){r(u[l],e,c),r(d[l],e,c)}),r(a,"fetch",s),o.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(s+"done",[null,e],n)}else o.emit(s+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(26)(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){c.emit("jsonp-error",[],p),c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=s(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),c.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t("ee").get("jsonp"),f=t(26)(c);if(e.exports=c,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?f.inPlace(Node.prototype,l,"dom-"):(f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-")),c.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(26)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=s(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(26),a=t("ee").get("promise"),s=i(a),c=t(23),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),s=f.resolve(i);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this),t[1]=s(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),s.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=s(t[0],"cb-",this),t[1]=s(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(26)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(26)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){x.push(t),h&&(b?b.then(a):v?v(a):(E=-E,R.data=E))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(26)(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(l,g),g.prototype=l.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(){var t=window.NREUM,e=t.info.accountID||null,n=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!e||!n||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:e,ap:n,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&e!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(21);e.exports={generateTraceHeader:r}},{}],16:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(p[r],this.listener,!1);e.aborted||(n.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):a(this,t),n.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return v(r)}function i(t,e){var n=f(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}function a(t,e){t.params.status=e.status;var n=o(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(17),u=t(15).generateTraceHeader,d=t("ee"),p=["load","error","abort","timeout"],l=p.length,h=t("id"),m=t(20),v=t(19),w=window.XMLHttpRequest;s.features.xhr=!0,t(14),d.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){a(e,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=!!NREUM.init.distributed_tracing.enabled),n&&this.sameOrigin){var r=u();r&&e.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=v(r);i&&(n.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{d.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<l;a++)e.addEventListener(p[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),d.on("xhr-load-added",function(t,e){var n=""+h(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,e){var n=""+h(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,e){e instanceof w&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],e)}),d.on("removeEventListener-end",function(t,e){e instanceof w&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],e)}),d.on("fn-start",function(t,e,n){e instanceof w&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,e){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,e],e)})}},{}],17:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],18:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(23),s=t(24),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],19:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],20:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(e=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}e.exports={generateUuid:r,generateCatId:o}},{}],22:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],23:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],24:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],25:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],26:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(24),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],s])}u(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],s),d}finally{u(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<e.length;c++)s=e[c],a=t[s],r(a)||(t[s]=n(a,f?s+o:o,i,s))}function u(n,r,o){if(!c||e){var i=c;c=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}c=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),s=m(n),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[x[n]];return d&&d.push([g,n,r,a]),a}}function l(t,e){y[t]=m(t).concat(e)}function h(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",x[n]=e,e in u||(u[e]=[])})}var y={},x={},g={on:l,addEventListener:l,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var s="nr@context",c=t("gos"),f=t(23),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()+b.offset],null,"api");var n=l.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(23),u=t("ee"),d=t(22),p=window,l=p.document,h="addEventListener",m="attachEvent",v=p.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:v,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1130.min.js"},g=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:g,userAgent:d};t(18),l[h]?(l[h]("DOMContentLoaded",i,!1),p[h]("load",r,!1)):(l[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(25)},{}]},{},["loader",2,16,5,3,4]);</script>
-    
+GIMP Palette
+Name: Material Design Palette
+Columns: 14
+#
+255 235 238  Red 50 (#FFEBEE)
+255 205 210  Red 100 (#FFCDD2)
+239 154 154  Red 200 (#EF9A9A)
+229 115 115  Red 300 (#E57373)
+239  83  80  Red 400 (#EF5350)
+244  67  54  Red 500 (#F44336)
+229  57  53  Red 600 (#E53935)
+211  47  47  Red 700 (#D32F2F)
+198  40  40  Red 800 (#C62828)
+183  28  28  Red 900 (#B71C1C)
+255 138 128  Red A100 (#FF8A80)
+255  82  82  Red A200 (#FF5252)
+255  23  68  Red A400 (#FF1744)
+213   0   0  Red A700 (#D50000)
+252 228 236  Pink 50 (#FCE4EC)
+248 187 208  Pink 100 (#F8BBD0)
+244 143 177  Pink 200 (#F48FB1)
+240  98 146  Pink 300 (#F06292)
+236  64 122  Pink 400 (#EC407A)
+233  30  99  Pink 500 (#E91E63)
+216  27  96  Pink 600 (#D81B60)
+194  24  91  Pink 700 (#C2185B)
+173  20  87  Pink 800 (#AD1457)
+136  14  79  Pink 900 (#880E4F)
+255 128 171  Pink A100 (#FF80AB)
+255  64 129  Pink A200 (#FF4081)
+245   0  87  Pink A400 (#F50057)
+197  17  98  Pink A700 (#C51162)
+243 229 245  Purple 50 (#F3E5F5)
+225 190 231  Purple 100 (#E1BEE7)
+206 147 216  Purple 200 (#CE93D8)
+186 104 200  Purple 300 (#BA68C8)
+171  71 188  Purple 400 (#AB47BC)
+156  39 176  Purple 500 (#9C27B0)
+142  36 170  Purple 600 (#8E24AA)
+123  31 162  Purple 700 (#7B1FA2)
+106  27 154  Purple 800 (#6A1B9A)
+ 74  20 140  Purple 900 (#4A148C)
+234 128 252  Purple A100 (#EA80FC)
+224  64 251  Purple A200 (#E040FB)
+213   0 249  Purple A400 (#D500F9)
+170   0 255  Purple A700 (#AA00FF)
+237 231 246  Deep purple 50 (#EDE7F6)
+209 196 233  Deep purple 100 (#D1C4E9)
+179 157 219  Deep purple 200 (#B39DDB)
+149 117 205  Deep purple 300 (#9575CD)
+126  87 194  Deep purple 400 (#7E57C2)
+103  58 183  Deep purple 500 (#673AB7)
+ 94  53 177  Deep purple 600 (#5E35B1)
+ 81  45 168  Deep purple 700 (#512DA8)
+ 69  39 160  Deep purple 800 (#4527A0)
+ 49  27 146  Deep purple 900 (#311B92)
+179 136 255  Deep purple A100 (#B388FF)
+124  77 255  Deep purple A200 (#7C4DFF)
+101  31 255  Deep purple A400 (#651FFF)
+ 98   0 234  Deep purple A700 (#6200EA)
+232 234 246  Indigo 50 (#E8EAF6)
+197 202 233  Indigo 100 (#C5CAE9)
+159 168 218  Indigo 200 (#9FA8DA)
+121 134 203  Indigo 300 (#7986CB)
+ 92 107 192  Indigo 400 (#5C6BC0)
+ 63  81 181  Indigo 500 (#3F51B5)
+ 57  73 171  Indigo 600 (#3949AB)
+ 48  63 159  Indigo 700 (#303F9F)
+ 40  53 147  Indigo 800 (#283593)
+ 26  35 126  Indigo 900 (#1A237E)
+140 158 255  Indigo A100 (#8C9EFF)
+ 83 109 254  Indigo A200 (#536DFE)
+ 61  90 254  Indigo A400 (#3D5AFE)
+ 48  79 254  Indigo A700 (#304FFE)
+227 242 253  Blue 50 (#E3F2FD)
+187 222 251  Blue 100 (#BBDEFB)
+144 202 249  Blue 200 (#90CAF9)
+100 181 246  Blue 300 (#64B5F6)
+ 66 165 245  Blue 400 (#42A5F5)
+ 33 150 243  Blue 500 (#2196F3)
+ 30 136 229  Blue 600 (#1E88E5)
+ 25 118 210  Blue 700 (#1976D2)
+ 21 101 192  Blue 800 (#1565C0)
+ 13  71 161  Blue 900 (#0D47A1)
+130 177 255  Blue A100 (#82B1FF)
+ 68 138 255  Blue A200 (#448AFF)
+ 41 121 255  Blue A400 (#2979FF)
+ 41  98 255  Blue A700 (#2962FF)
+225 245 254  Light blue 50 (#E1F5FE)
+179 229 252  Light blue 100 (#B3E5FC)
+129 212 250  Light blue 200 (#81D4FA)
+ 79 195 247  Light blue 300 (#4FC3F7)
+ 41 182 246  Light blue 400 (#29B6F6)
+  3 169 244  Light blue 500 (#03A9F4)
+  3 155 229  Light blue 600 (#039BE5)
+  2 136 209  Light blue 700 (#0288D1)
+  2 119 189  Light blue 800 (#0277BD)
+  1  87 155  Light blue 900 (#01579B)
+128 216 255  Light blue A100 (#80D8FF)
+ 64 196 255  Light blue A200 (#40C4FF)
+  0 176 255  Light blue A400 (#00B0FF)
+  0 145 234  Light blue A700 (#0091EA)
+224 247 250  Cyan 50 (#E0F7FA)
+178 235 242  Cyan 100 (#B2EBF2)
+128 222 234  Cyan 200 (#80DEEA)
+ 77 208 225  Cyan 300 (#4DD0E1)
+ 38 198 218  Cyan 400 (#26C6DA)
+  0 188 212  Cyan 500 (#00BCD4)
+  0 172 193  Cyan 600 (#00ACC1)
+  0 151 167  Cyan 700 (#0097A7)
+  0 131 143  Cyan 800 (#00838F)
+  0  96 100  Cyan 900 (#006064)
+132 255 255  Cyan A100 (#84FFFF)
+ 24 255 255  Cyan A200 (#18FFFF)
+  0 229 255  Cyan A400 (#00E5FF)
+  0 184 212  Cyan A700 (#00B8D4)
+224 242 241  Teal 50 (#E0F2F1)
+178 223 219  Teal 100 (#B2DFDB)
+128 203 196  Teal 200 (#80CBC4)
+ 77 182 172  Teal 300 (#4DB6AC)
+ 38 166 154  Teal 400 (#26A69A)
+  0 150 136  Teal 500 (#009688)
+  0 137 123  Teal 600 (#00897B)
+  0 121 107  Teal 700 (#00796B)
+  0 105  92  Teal 800 (#00695C)
+  0  77  64  Teal 900 (#004D40)
+167 255 235  Teal A100 (#A7FFEB)
+100 255 218  Teal A200 (#64FFDA)
+ 29 233 182  Teal A400 (#1DE9B6)
+  0 191 165  Teal A700 (#00BFA5)
+232 245 233  Green 50 (#E8F5E9)
+200 230 201  Green 100 (#C8E6C9)
+165 214 167  Green 200 (#A5D6A7)
+129 199 132  Green 300 (#81C784)
+102 187 106  Green 400 (#66BB6A)
+ 76 175  80  Green 500 (#4CAF50)
+ 67 160  71  Green 600 (#43A047)
+ 56 142  60  Green 700 (#388E3C)
+ 46 125  50  Green 800 (#2E7D32)
+ 27  94  32  Green 900 (#1B5E20)
+185 246 202  Green A100 (#B9F6CA)
+105 240 174  Green A200 (#69F0AE)
+  0 230 118  Green A400 (#00E676)
+  0 200  83  Green A700 (#00C853)
+241 248 233  Light green 50 (#F1F8E9)
+220 237 200  Light green 100 (#DCEDC8)
+197 225 165  Light green 200 (#C5E1A5)
+174 213 129  Light green 300 (#AED581)
+156 204 101  Light green 400 (#9CCC65)
+139 195  74  Light green 500 (#8BC34A)
+124 179  66  Light green 600 (#7CB342)
+104 159  56  Light green 700 (#689F38)
+ 85 139  47  Light green 800 (#558B2F)
+ 51 105  30  Light green 900 (#33691E)
+204 255 144  Light green A100 (#CCFF90)
+178 255  89  Light green A200 (#B2FF59)
+118 255   3  Light green A400 (#76FF03)
+100 221  23  Light green A700 (#64DD17)
+249 251 231  Lime 50 (#F9FBE7)
+240 244 195  Lime 100 (#F0F4C3)
+230 238 156  Lime 200 (#E6EE9C)
+220 231 117  Lime 300 (#DCE775)
+212 225  87  Lime 400 (#D4E157)
+205 220  57  Lime 500 (#CDDC39)
+192 202  51  Lime 600 (#C0CA33)
+175 180  43  Lime 700 (#AFB42B)
+158 157  36  Lime 800 (#9E9D24)
+130 119  23  Lime 900 (#827717)
+244 255 129  Lime A100 (#F4FF81)
+238 255  65  Lime A200 (#EEFF41)
+198 255   0  Lime A400 (#C6FF00)
+174 234   0  Lime A700 (#AEEA00)
+255 253 231  Yellow 50 (#FFFDE7)
+255 249 196  Yellow 100 (#FFF9C4)
+255 245 157  Yellow 200 (#FFF59D)
+255 241 118  Yellow 300 (#FFF176)
+255 238  88  Yellow 400 (#FFEE58)
+255 235  59  Yellow 500 (#FFEB3B)
+253 216  53  Yellow 600 (#FDD835)
+251 192  45  Yellow 700 (#FBC02D)
+249 168  37  Yellow 800 (#F9A825)
+245 127  23  Yellow 900 (#F57F17)
+255 255 141  Yellow A100 (#FFFF8D)
+255 255   0  Yellow A200 (#FFFF00)
+255 234   0  Yellow A400 (#FFEA00)
+255 214   0  Yellow A700 (#FFD600)
+255 248 225  Amber 50 (#FFF8E1)
+255 236 179  Amber 100 (#FFECB3)
+255 224 130  Amber 200 (#FFE082)
+255 213  79  Amber 300 (#FFD54F)
+255 202  40  Amber 400 (#FFCA28)
+255 193   7  Amber 500 (#FFC107)
+255 179   0  Amber 600 (#FFB300)
+255 160   0  Amber 700 (#FFA000)
+255 143   0  Amber 800 (#FF8F00)
+255 111   0  Amber 900 (#FF6F00)
+255 229 127  Amber A100 (#FFE57F)
+255 215  64  Amber A200 (#FFD740)
+255 196   0  Amber A400 (#FFC400)
+255 171   0  Amber A700 (#FFAB00)
+255 243 224  Orange 50 (#FFF3E0)
+255 224 178  Orange 100 (#FFE0B2)
+255 204 128  Orange 200 (#FFCC80)
+255 183  77  Orange 300 (#FFB74D)
+255 167  38  Orange 400 (#FFA726)
+255 152   0  Orange 500 (#FF9800)
+251 140   0  Orange 600 (#FB8C00)
+245 124   0  Orange 700 (#F57C00)
+239 108   0  Orange 800 (#EF6C00)
+230  81   0  Orange 900 (#E65100)
+255 209 128  Orange A100 (#FFD180)
+255 171  64  Orange A200 (#FFAB40)
+255 145   0  Orange A400 (#FF9100)
+255 109   0  Orange A700 (#FF6D00)
+251 233 231  Deep orange 50 (#FBE9E7)
+255 204 188  Deep orange 100 (#FFCCBC)
+255 171 145  Deep orange 200 (#FFAB91)
+255 138 101  Deep orange 300 (#FF8A65)
+255 112  67  Deep orange 400 (#FF7043)
+255  87  34  Deep orange 500 (#FF5722)
+244  81  30  Deep orange 600 (#F4511E)
+230  74  25  Deep orange 700 (#E64A19)
+216  67  21  Deep orange 800 (#D84315)
+191  54  12  Deep orange 900 (#BF360C)
+255 158 128  Deep orange A100 (#FF9E80)
+255 110  64  Deep orange A200 (#FF6E40)
+255  61   0  Deep orange A400 (#FF3D00)
+221  44   0  Deep orange A700 (#DD2C00)
+239 235 233  Brown 50 (#EFEBE9)
+215 204 200  Brown 100 (#D7CCC8)
+188 170 164  Brown 200 (#BCAAA4)
+161 136 127  Brown 300 (#A1887F)
+141 110  99  Brown 400 (#8D6E63)
+121  85  72  Brown 500 (#795548)
+109  76  65  Brown 600 (#6D4C41)
+ 93  64  55  Brown 700 (#5D4037)
+ 78  52  46  Brown 800 (#4E342E)
+ 62  39  35  Brown 900 (#3E2723)
+250 250 250  Grey 50 (#FAFAFA)
+245 245 245  Grey 100 (#F5F5F5)
+238 238 238  Grey 200 (#EEEEEE)
+224 224 224  Grey 300 (#E0E0E0)
+189 189 189  Grey 400 (#BDBDBD)
+158 158 158  Grey 500 (#9E9E9E)
+117 117 117  Grey 600 (#757575)
+ 97  97  97  Grey 700 (#616161)
+ 66  66  66  Grey 800 (#424242)
+ 33  33  33  Grey 900 (#212121)
+236 239 241  Blue grey 50 (#ECEFF1)
+207 216 220  Blue grey 100 (#CFD8DC)
+176 190 197  Blue grey 200 (#B0BEC5)
+144 164 174  Blue grey 300 (#90A4AE)
+120 144 156  Blue grey 400 (#78909C)
+ 96 125 139  Blue grey 500 (#607D8B)
+ 84 110 122  Blue grey 600 (#546E7A)
+ 69  90 100  Blue grey 700 (#455A64)
+ 55  71  79  Blue grey 800 (#37474F)
+ 38  50  56  Blue grey 900 (#263238)
+  0   0   0  Black (#000000)
+255 255 255  White (#FFFFFF)
 
-
-<meta name="bb-env" content="production" />
-<meta id="bb-canon-url" name="bb-canon-url" content="https://bitbucket.org">
-<meta name="bb-api-canon-url" content="https://api.bitbucket.org">
-<meta name="apitoken" content="{&quot;token&quot;: &quot;KoNP1sb-9VVmPzNU3ySrdMUvohsY2d8CkwWCbDzJC-QLHFbILrxUzldujwOQ4-2b7rRC9TESX7WI8OQDJXuVsrg0sABxL7FCSshB5QqFVu0dbQ==&quot;, &quot;expiration&quot;: 1566677470.404358}">
-
-
-<meta name="bb-commit-hash" content="4973dbe55bef">
-<meta name="bb-app-node" content="app-125">
-<meta name="bb-view-name" content="bitbucket.apps.repo2.views.filebrowse">
-<meta name="ignore-whitespace" content="False">
-<meta name="tab-size" content="None">
-<meta name="locale" content="en">
-<meta name="application-name" content="Bitbucket">
-<meta name="apple-mobile-web-app-title" content="Bitbucket">
-<meta name="slack-app-id" content="A8W8QLZD1">
-<meta name="statuspage-api-host" content="https://bqlf8qjztdtr.statuspage.io">
-
-
-<meta name="theme-color" content="#0049B0">
-<meta name="msapplication-TileColor" content="#0052CC">
-<meta name="msapplication-TileImage" content="https://d301sr5gafysq2.cloudfront.net/4973dbe55bef/img/logos/bitbucket/mstile-150x150.png">
-<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://d301sr5gafysq2.cloudfront.net/4973dbe55bef/img/logos/bitbucket/apple-touch-icon.png">
-<link rel="icon" sizes="192x192" type="image/png" href="https://d301sr5gafysq2.cloudfront.net/4973dbe55bef/img/logos/bitbucket/android-chrome-192x192.png">
-
-<link rel="icon" sizes="16x16 24x24 32x32 64x64" type="image/x-icon" href="/favicon.ico?v=2">
-<link rel="mask-icon" href="https://d301sr5gafysq2.cloudfront.net/4973dbe55bef/img/logos/bitbucket/safari-pinned-tab.svg" color="#0052CC">
-
-<link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Bitbucket">
-
-    <meta name="description" content="">
-    <meta name="bb-single-page-app" content="true">
-    
-    <script nonce="">
-
-if (window.performance) {
-
-  
-  window.performance.okayToSendMetrics = !document.hidden && 'onvisibilitychange' in document;
-
-  if (window.performance.okayToSendMetrics) {
-
-    
-    window.addEventListener('visibilitychange', function () {
-      if (document.hidden) {
-        window.performance.okayToSendMetrics = false;
-      }
-    });
-  }
-}
-</script>
-    
-    
-      
-        <link rel="stylesheet" href="https://d301sr5gafysq2.cloudfront.net/frontbucket/vendor.1e7fb924f5f8.css">
-      
-      
-    
-    
-  </head>
-  <body>
-    <div id="root">
-    
-    </div>
-    <script nonce="">
-      window.__sentry__ = {"dsn": "https://2dcda83904474d8c86928ebbfa1ab294@sentry.io/1480772", "environment": "production"};
-      window.__initial_state__ = {"section": {"repository": {"connectActions": [], "cloneProtocol": "https", "currentRepository": {"scm": "hg", "website": "", "name": "material-color-palette", "language": "", "description": "Material design color palette for GIMP and Inkscape.", "links": {"clone": [{"href": "https://alexanderniki@bitbucket.org/alexanderniki/material-color-palette", "name": "https"}, {"href": "ssh://hg@bitbucket.org/alexanderniki/material-color-palette", "name": "ssh"}], "self": {"href": "https://bitbucket.org/!api/2.0/repositories/alexanderniki/material-color-palette"}, "html": {"href": "https://bitbucket.org/alexanderniki/material-color-palette"}, "avatar": {"href": "https://bytebucket.org/ravatar/%7B44d5bbf6-a48b-4840-bd9f-d8572527c489%7D?ts=default"}}, "mainbranch": {"name": "default"}, "full_name": "alexanderniki/material-color-palette", "owner": {"has_2fa_enabled": null, "display_name": "Alexander Niki", "uuid": "{9a27deca-279a-4069-87a8-e09dd68cccf0}", "links": {"self": {"href": "https://bitbucket.org/!api/2.0/users/%7B9a27deca-279a-4069-87a8-e09dd68cccf0%7D"}, "html": {"href": "https://bitbucket.org/%7B9a27deca-279a-4069-87a8-e09dd68cccf0%7D/"}, "avatar": {"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:7cf5fe2c-3096-450c-aef5-e0371b4f8fb8/838764d0-061e-48d0-97e1-5b2c0bcf43ae/128"}}, "type": "user", "created_on": "2014-04-03T13:37:51.931695+00:00", "is_staff": false, "account_status": "active", "nickname": "alexanderniki", "properties": {}, "account_id": "557058:7cf5fe2c-3096-450c-aef5-e0371b4f8fb8"}, "updated_on": "2017-09-08T17:23:40.117015+00:00", "type": "repository", "slug": "material-color-palette", "is_private": false, "uuid": "{44d5bbf6-a48b-4840-bd9f-d8572527c489}"}, "mirrors": [], "menuItems": [{"analytics_label": "repository.source", "is_client_link": true, "icon_class": "icon-source", "badge_label": null, "weight": 200, "url": "/alexanderniki/material-color-palette/src", "tab_name": "source", "can_display": true, "label": "Source", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": ["/diff", "/history-node"], "target": "_self", "id": "repo-source-link", "icon": "icon-source"}, {"analytics_label": "repository.commits", "is_client_link": true, "icon_class": "icon-commits", "badge_label": null, "weight": 300, "url": "/alexanderniki/material-color-palette/commits/", "tab_name": "commits", "can_display": true, "label": "Commits", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-commits-link", "icon": "icon-commits"}, {"analytics_label": "repository.branches", "is_client_link": true, "icon_class": "icon-branches", "badge_label": null, "weight": 400, "url": "/alexanderniki/material-color-palette/branches/", "tab_name": "branches", "can_display": true, "label": "Branches", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-branches-link", "icon": "icon-branches"}, {"analytics_label": "repository.pullrequests", "is_client_link": true, "icon_class": "icon-pull-requests", "badge_label": null, "weight": 500, "url": "/alexanderniki/material-color-palette/pull-requests/", "tab_name": "pullrequests", "can_display": true, "label": "Pull requests", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-pullrequests-link", "icon": "icon-pull-requests"}, {"analytics_label": "site.addon", "is_client_link": true, "icon_class": "aui-iconfont-build", "badge_label": null, "weight": 550, "url": "/alexanderniki/material-color-palette/addon/pipelines-installer/home", "tab_name": "repopage-kbbqoq-add-on-link", "can_display": true, "label": "Pipelines", "icon_url": null, "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "type": "connect_menu_item", "id": "repopage-kbbqoq-add-on-link", "target": "_self"}, {"analytics_label": "repository.downloads", "is_client_link": false, "icon_class": "icon-downloads", "badge_label": null, "weight": 800, "url": "/alexanderniki/material-color-palette/downloads/", "tab_name": "downloads", "can_display": true, "label": "Downloads", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-downloads-link", "icon": "icon-downloads"}, {"analytics_label": "site.addon", "is_client_link": true, "icon_class": "aui-iconfont-unfocus", "badge_label": null, "weight": 100, "url": "/alexanderniki/material-color-palette/addon/bitbucket-trello-integration-installer/trello-board", "tab_name": "repopage-oB9oAK-add-on-link", "can_display": true, "label": "Boards", "icon_url": "https://bitbucket-connect-icons.s3.amazonaws.com/add-on/icons/35ceae0c-17b1-443c-a6e8-d9de1d7cccdb.svg", "anchor": false, "analytics_payload": {}, "matching_url_prefixes": [], "type": "connect_menu_item", "id": "repopage-oB9oAK-add-on-link", "target": "_self"}, {"analytics_label": "repository.settings", "is_client_link": false, "icon_class": "icon-settings", "badge_label": null, "weight": 100, "url": "/alexanderniki/material-color-palette/admin", "tab_name": "admin", "can_display": true, "label": "Settings", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-settings-link", "icon": "icon-settings"}], "bitbucketActions": [{"analytics_label": "repository.clone", "is_client_link": false, "icon_class": "icon-clone", "badge_label": null, "weight": 100, "url": "#clone", "tab_name": "clone", "can_display": true, "label": "<strong>Clone<\/strong> this repository", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-clone-button", "icon": "icon-clone"}, {"analytics_label": "repository.create_branch", "is_client_link": true, "icon_class": "icon-create-branch", "badge_label": null, "weight": 200, "url": "/alexanderniki/material-color-palette/branch", "tab_name": "create-branch", "can_display": true, "label": "Create a <strong>branch<\/strong>", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-create-branch-link", "icon": "icon-create-branch"}, {"analytics_label": "create_pullrequest", "is_client_link": false, "icon_class": "icon-create-pull-request", "badge_label": null, "weight": 300, "url": "/alexanderniki/material-color-palette/pull-requests/new", "tab_name": "create-pullreqs", "can_display": true, "label": "Create a <strong>pull request<\/strong>", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-create-pull-request-link", "icon": "icon-create-pull-request"}, {"analytics_label": "repository.compare", "is_client_link": false, "icon_class": "aui-icon-small aui-iconfont-devtools-compare", "badge_label": null, "weight": 400, "url": "/alexanderniki/material-color-palette/branches/compare", "tab_name": "compare", "can_display": true, "label": "<strong>Compare<\/strong> branches or tags", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-compare-link", "icon": "aui-icon-small aui-iconfont-devtools-compare"}, {"analytics_label": "repository.fork", "is_client_link": false, "icon_class": "icon-fork", "badge_label": null, "weight": 500, "url": "/alexanderniki/material-color-palette/fork", "tab_name": "fork", "can_display": true, "label": "<strong>Fork<\/strong> this repository", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-fork-link", "icon": "icon-fork"}], "activeMenuItem": "source"}}, "global": {"theme": null, "features": {"crf-skip-excessive-diffs": true, "ignore-bb-notification-updates": true, "whitelisted_throttle_exemption": true, "workspaces-api-proxy": true, "exp-share-to-invite-variation": false, "nav-next-notify-change": true, "show-billing-errors": true, "show-guidance-message": true, "restrict-commit-author-data": true, "connect-v5-repopage": true, "nav-add-file": false, "spa-dashboard-repository-list": true, "app-switcher": true, "whats-new": true, "provisioning-api-jira-integration": true, "markdown-embedded-html": false, "spa-profile-repository-list": true, "issue-tracker-include-attachment-url": true, "bbcs-367-log-session-invalidation": true, "clonebundles": true, "prlinks-installer": true, "pride-logo": false, "auto-prs-prime-fallback": true, "enable-router-metrics": true, "provisioning-auto-login": true, "diff-api-renames": true, "clone-in-xcode": true, "create-pr-dialog": true, "twofactor-recovery-flow": true, "new-code-review": false, "use-moneybucket": true, "statuspage-incident-message": true, "atlassian-editor": true, "force-old-code-review": false, "frontbucket-leave-repository": true, "support-admin-notifications": true, "new-source-browser": true, "identity-passthrough-percent": true, "strict-require-issue-key": true, "hg-deprecation-warning-flag": true, "exp-new-user-survey": true, "evolution": false, "app-switcher-opsgenie": true, "hg-cli-deprecation-warning": true, "add-commit-authors-as-reviewers": true, "spa-commit-list": true, "hg-deprecation-warning": true}, "locale": "en", "importBitbucketActions": [{"analytics_label": null, "is_client_link": false, "icon_class": "", "badge_label": null, "weight": 100, "url": "/repo/import", "tab_name": null, "can_display": true, "label": "<strong>Repository<\/strong>", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repository-import-drawer-item", "icon": ""}], "browser_monitoring": true, "isCodeReviewWelcomeDialogOpen": true, "is_mobile_user_agent": false, "site_message": {"title": "We\u2019re removing Mercurial support", "feature_slug": "hg-deprecation-warning-flag", "text": "Mercurial features and repositories will be removed from Bitbucket on June 1, 2020. Creating new Mercurial repositories on Bitbucket will be disabled on February 1, 2020.", "appearance": "flag", "url": "https://bitbucket.org/blog/sunsetting-mercurial-support-in-bitbucket", "id": 30266}, "commitViewSidebarWidth": null, "codeReviewSidebarWidth": null, "path": "/alexanderniki/material-color-palette/src/default/material-color-palette.gpl", "currentUser": {"has_2fa_enabled": null, "display_name": "Alexander Niki", "uuid": "{9a27deca-279a-4069-87a8-e09dd68cccf0}", "links": {"self": {"href": "https://bitbucket.org/!api/2.0/users/%7B9a27deca-279a-4069-87a8-e09dd68cccf0%7D"}, "html": {"href": "https://bitbucket.org/%7B9a27deca-279a-4069-87a8-e09dd68cccf0%7D/"}, "avatar": {"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:7cf5fe2c-3096-450c-aef5-e0371b4f8fb8/838764d0-061e-48d0-97e1-5b2c0bcf43ae/128"}}, "extra": {"has_ssh_key": false, "has_atlassian_account": true}, "type": "user", "created_on": "2014-04-03T13:37:51.931695+00:00", "is_staff": false, "account_status": "active", "nickname": "alexanderniki", "properties": {}, "account_id": "557058:7cf5fe2c-3096-450c-aef5-e0371b4f8fb8"}, "sourceBrowserSidebarWidth": null, "bitbucketActions": [{"analytics_label": null, "is_client_link": false, "icon_class": "", "badge_label": null, "weight": 100, "url": "/repo/create?owner=alexanderniki", "tab_name": null, "can_display": true, "label": "<strong>Repository<\/strong>", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repository-create-drawer-item", "icon": ""}, {"analytics_label": null, "is_client_link": false, "icon_class": "", "badge_label": null, "weight": 110, "url": "/account/create-team/", "tab_name": null, "can_display": true, "label": "<strong>Team<\/strong>", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "team-create-drawer-item", "icon": ""}, {"analytics_label": null, "is_client_link": false, "icon_class": "", "badge_label": null, "weight": 120, "url": "/account/projects/create?owner=alexanderniki", "tab_name": null, "can_display": true, "label": "<strong>Project<\/strong>", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "project-create-drawer-item", "icon": ""}, {"analytics_label": null, "is_client_link": false, "icon_class": "", "badge_label": null, "weight": 130, "url": "/snippets/new?owner=alexanderniki", "tab_name": null, "can_display": true, "label": "<strong>Snippet<\/strong>", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "snippet-create-drawer-item", "icon": ""}], "needs_marketing_consent": false, "isCommitViewSidebarOpen": true, "targetUser": {"has_2fa_enabled": null, "display_name": "Alexander Niki", "uuid": "{9a27deca-279a-4069-87a8-e09dd68cccf0}", "links": {"self": {"href": "https://bitbucket.org/!api/2.0/users/%7B9a27deca-279a-4069-87a8-e09dd68cccf0%7D"}, "html": {"href": "https://bitbucket.org/%7B9a27deca-279a-4069-87a8-e09dd68cccf0%7D/"}, "avatar": {"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:7cf5fe2c-3096-450c-aef5-e0371b4f8fb8/838764d0-061e-48d0-97e1-5b2c0bcf43ae/128"}}, "type": "user", "created_on": "2014-04-03T13:37:51.931695+00:00", "is_staff": false, "account_status": "active", "nickname": "alexanderniki", "properties": {}, "account_id": "557058:7cf5fe2c-3096-450c-aef5-e0371b4f8fb8"}, "geoip_country": "RU", "hasSeenPrivacySettingsAnnouncement": false, "targetFeatures": {"crf-skip-excessive-diffs": true, "ignore-bb-notification-updates": true, "whitelisted_throttle_exemption": true, "workspaces-api-proxy": true, "exp-share-to-invite-variation": false, "nav-next-notify-change": true, "show-billing-errors": true, "show-guidance-message": true, "restrict-commit-author-data": true, "connect-v5-repopage": true, "nav-add-file": false, "spa-dashboard-repository-list": true, "app-switcher": true, "whats-new": true, "provisioning-api-jira-integration": true, "markdown-embedded-html": false, "spa-profile-repository-list": true, "issue-tracker-include-attachment-url": true, "bbcs-367-log-session-invalidation": true, "clonebundles": true, "prlinks-installer": true, "pride-logo": false, "auto-prs-prime-fallback": true, "enable-router-metrics": true, "provisioning-auto-login": true, "diff-api-renames": true, "clone-in-xcode": true, "create-pr-dialog": true, "twofactor-recovery-flow": true, "new-code-review": false, "use-moneybucket": true, "statuspage-incident-message": true, "atlassian-editor": true, "force-old-code-review": false, "frontbucket-leave-repository": true, "support-admin-notifications": true, "new-source-browser": true, "identity-passthrough-percent": true, "strict-require-issue-key": true, "hg-deprecation-warning-flag": true, "exp-new-user-survey": true, "evolution": false, "app-switcher-opsgenie": true, "hg-cli-deprecation-warning": true, "add-commit-authors-as-reviewers": true, "spa-commit-list": true, "hg-deprecation-warning": true}, "isFocusedTask": false, "teams": [], "identityPassthroughEnabled": true, "isCodeReviewSidebarOpen": true, "flags": [], "isNavigationOpen": true, "focusedTaskBackButtonUrl": "https://bitbucket.org/alexanderniki/material-color-palette/src/default/", "isSourceBrowserSidebarOpen": false, "whats_new_feed": "https://bitbucket.org/blog/wp-json/wp/v2/posts?categories=196&context=embed&per_page=6&orderby=date&order=desc"}, "repository": {"source": {"section": {"hash": "1f9036801e63e390ca4961b7b025954b8ecacac5", "atRef": null, "ref": {"heads": [{"type": "commit", "hash": "1f9036801e63e390ca4961b7b025954b8ecacac5", "links": {"self": {"href": "https://bitbucket.org/!api/2.0/repositories/alexanderniki/material-color-palette/commit/1f9036801e63e390ca4961b7b025954b8ecacac5"}, "html": {"href": "https://bitbucket.org/alexanderniki/material-color-palette/commits/1f9036801e63e390ca4961b7b025954b8ecacac5"}}}], "name": "default", "links": {"self": {"href": "https://bitbucket.org/!api/2.0/repositories/alexanderniki/material-color-palette/refs/branches/default"}, "html": {"href": "https://bitbucket.org/alexanderniki/material-color-palette/branch/default"}}, "target": {"type": "commit", "hash": "1f9036801e63e390ca4961b7b025954b8ecacac5", "links": {"self": {"href": "https://bitbucket.org/!api/2.0/repositories/alexanderniki/material-color-palette/commit/1f9036801e63e390ca4961b7b025954b8ecacac5"}, "html": {"href": "https://bitbucket.org/alexanderniki/material-color-palette/commits/1f9036801e63e390ca4961b7b025954b8ecacac5"}}}}, "showCloneGuidance": false}}}};
-      window.__settings__ = {"MARKETPLACE_TERMS_OF_USE_URL": null, "JIRA_ISSUE_COLLECTORS": {"code-review-beta": {"url": "https://bitbucketfeedback.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-4bqv2z/b/20/a44af77267a987a660377e5c46e0fb64/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=bb066400", "id": "bb066400"}, "code-review-rollout": {"url": "https://bitbucketfeedback.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-4bqv2z/b/20/a44af77267a987a660377e5c46e0fb64/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=de003e2d", "id": "de003e2d"}, "source-browser": {"url": "https://bitbucketfeedback.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-tqnsjm/b/20/a44af77267a987a660377e5c46e0fb64/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=c19c2ff6", "id": "c19c2ff6"}}, "CANON_URL": "https://bitbucket.org", "AVAILABLE_SITES_URL": "https://api-private.atlassian.com/available-sites", "CONSENT_HUB_FRONTEND_BASE_URL": "https://preferences.atlassian.com", "API_CANON_URL": "https://api.bitbucket.org", "SOCIAL_AUTH_ATLASSIANID_LOGOUT_URL": "https://id.atlassian.com/logout", "EMOJI_STANDARD_BASE_URL": "https://api-private.atlassian.com/emoji/"};
-      window.__webpack_nonce__ = '';
-      window.isInitialLoadApdex = true;
-    </script>
-    
-      <script nonce="">
-        window.__webpack_public_path__ = 'https://d301sr5gafysq2.cloudfront.net/frontbucket/';
-      </script>
-      <script nonce="" src="https://d301sr5gafysq2.cloudfront.net/frontbucket/locales/en.5e155c5dbb74605a1e58.js"></script>
-        <script nonce="" src="https://d301sr5gafysq2.cloudfront.net/frontbucket/runtime.245a2e55021fcad90e41.js"></script>
-        <script nonce="" src="https://d301sr5gafysq2.cloudfront.net/frontbucket/vendor.a4b6b69d2648addcf8e7.js"></script>
-
-      <!-- NOTE: we need ajs to load before app.js otherwise connect may not work -->
-        <script nonce="" src="https://d301sr5gafysq2.cloudfront.net/frontbucket/ajs.a9488340379ede07529d.js"></script>
-      <script nonce="" src="https://d301sr5gafysq2.cloudfront.net/frontbucket/app.876fa1a4fb09b73e5179.js"></script>
-        <script nonce="" defer src="https://d301sr5gafysq2.cloudfront.net/frontbucket/performance-timing.50232f594b0efcb637d1.js"></script>
-    
-    <script nonce="" type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"a2cef8c3d3","agent":"","transactionName":"NFcGYEdUW0IAVE1QCw0dIkFbVkFYDlkWWw0XUBFXXlBBHwBHSUpKEVcUWwcbQ1gEQEoDAgpeAVZHWkJCBA==","applicationID":"1841284","errorBeacon":"bam.nr-data.net","applicationTime":151}</script>
-  </body>
-</html>
